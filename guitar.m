@@ -1,5 +1,4 @@
-function output = guitar(f, s)
-Fs = 44100;
+function output = guitar(Fs, f, s)
 N = round(Fs/f);
 N = round(N/2)*2;
 
