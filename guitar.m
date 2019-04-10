@@ -1,4 +1,4 @@
-function output = guitar(f, l)
+function output = guitar(f, s)
 Fs = 44100;
 N = round(Fs/f);
 N = round(N/2)*2;
@@ -13,7 +13,7 @@ start = [linspace(0, 1, pluck_point) linspace(1, 0, N/2-pluck_point)];
 fr = start;
 fl = start;
 
-record_length = l * Fs;
+record_length = s;
 output = zeros(1, record_length);
 for i = 1:record_length
     output(1, i) = fr(1, sample_point) + fl(1, sample_point);

@@ -16,15 +16,15 @@ start = [linspace(0, 1, pluck_point) linspace(1, 0, N/2-pluck_point)];
 fr = start;
 fl = start;
 
-pt = .01;
+pt = .05;
 l = 2;
 record_length = l * Fs;
 recorded = zeros(1, record_length);
 for i = 1:record_length
-    % pause(pt)
-    % plot(x, fr + fl)
-    % xlim([0 N/2])
-    % ylim([-1 1])
+    pause(pt)
+    plot(x, fr, x, fl)
+    xlim([0 N/2])
+    ylim([-2 2])
     x = 1:N/2;
     recorded(1, i) = fr(1, sample_point) + fl(1, sample_point);
     fl_temp = fl;
