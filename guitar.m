@@ -1,13 +1,14 @@
 function output = guitar(f, l)
 Fs = 44100;
-N = Fs/f;
+N = round(Fs/f);
+N = round(N/2)*2;
 
 fr = zeros(1, N/2);
 fl = zeros(1, N/2);
 
 % Piecewise waveform.
-pluck_point = N/10;
-sample_point = N/4;
+pluck_point = round(N/10);
+sample_point = round(N/4);
 start = [linspace(0, 1, pluck_point) linspace(1, 0, N/2-pluck_point)];
 fr = start;
 fl = start;
@@ -27,5 +28,4 @@ for i = 1:record_length
     y = .99;
     fr(1, N/2) = y.*(-a.*fl_temp(1, N/2) + (1-a).*fr_temp(1, N/2-1));
 end 
-soundsc(output, Fs);
 end
