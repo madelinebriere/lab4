@@ -21,11 +21,11 @@ l = 2;
 record_length = l * Fs;
 recorded = zeros(1, record_length);
 for i = 1:record_length
-    pause(pt)
-    plot(x, fr, x, fl)
-    xlim([0 N/2])
-    ylim([-2 2])
-    x = 1:N/2;
+    % pause(pt)
+    % plot(x, fr, x, fl)
+    % xlim([0 N/2])
+    % ylim([-2 2])
+    % x = 1:N/2;
     recorded(1, i) = fr(1, sample_point) + fl(1, sample_point);
     fl_temp = fl;
     fr_temp = fr;

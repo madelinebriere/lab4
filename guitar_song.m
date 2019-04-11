@@ -18,24 +18,24 @@ bw = zeros(1,length(bet)); %zero vector for pause
 
 %% Note Frequencies
 
-A = 220;
-As = 220*2^(2/12);
+A = 110;
+As = 110*2^(2/12);
 Ah = A*2;
 Al = A/2;
-B = 220*2^(2/12);
+B = 110*2^(2/12);
 Bl = B/2;
-C = 220*2^(3/12);
-Cs = 220*2^(4/12);
+C = 110*2^(3/12);
+Cs = 110*2^(4/12);
 Csl = Cs/2;
-D = 220*2^(5/12);
+D = 110*2^(5/12);
 Dl = D/2;
-E = 220*2^(7/12);
+E = 110*2^(7/12);
 El = E/2;
-F = 220*2^(8/12);
-Fs = 220*2^(9/12);
+F = 110*2^(8/12);
+Fs = 110*2^(9/12);
 Fsl = Fs/2;
-G = 220*2^(10/12);
-Gs = 220*2^(11/12);
+G = 110*2^(10/12);
+Gs = 110*2^(11/12);
 Gl = G/2;
 Af = Gs/2;
 
@@ -64,4 +64,5 @@ m18 = [g(fs,Fs,t4dot) g(fs,G,t8) g(fs,E,t8) g(fs,D,t16) g(fs,B,t8dot) zeros(1,t1
 m19 = [g(fs,D,t1)];
 
 m = [m1 m2 m3 m4 m5 m6 m7 m8 m9 m10 m11 m12 m13 m14 m15 m16 m17 m18 m19];
-%soundsc(m,8000)
+soundsc(m,8000)
+audiowrite('go_the_distance.wav', m, 8000)
