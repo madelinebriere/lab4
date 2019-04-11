@@ -42,7 +42,7 @@ Af = Gs/2;
 b = zeros(1,bw*fs);
 
 %%
-m1 = [g(fs,Fsl,0.5) g(fs,A,0.5)];
+m1 = [g(fs,Fsl,t16) g(fs,A,t16)];
 m2 = [g(fs,B,t4) g(fs,A,t4) g(fs,Fsl,t4) zeros(1,t8*fs) g(fs,Fsl,t16) g(fs,A,t16)];
 m3 = [g(fs,B,t4) g(fs,A,t4) g(fs,Fsl,t4) zeros(1,t8*fs) g(fs,Fsl,t16) g(fs,A,t16)];
 m4 = [g(fs,B,t4) g(fs,Cs,t4) g(fs,D,t8) g(fs,A,t8dot) zeros(1,t16*fs) g(fs,Dl,t16) g(fs,Fsl,t16)];
